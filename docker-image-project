@@ -22,3 +22,7 @@ ENTRYPOINT ["java","-jar","/websocketdemo.jar"]
 docker build -t chatapp .
 ###to check image
 docker images
+#####run the container
+ 42  docker images
+   43  docker run -d -p 85:8080 chatapp
+   44  docker ps
