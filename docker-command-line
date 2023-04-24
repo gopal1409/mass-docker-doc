@@ -8,5 +8,10 @@
    11  docker container run --publish 82:80 --detach httpd
    12  docker images
    13  docker container run --publish 83:80 --detach httpd
-   14  history
+####containers are running as process
+ 10  docker ps -a
+   11  docker ps
+   12  docker top e8c90
+   13  ps aux
+   14  kill -9 79811
 
