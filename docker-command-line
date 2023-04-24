@@ -14,4 +14,4 @@
    12  docker top e8c90
    13  ps aux
    14  kill -9 79811
-
+docker ps
