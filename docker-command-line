@@ -20,4 +20,7 @@ docker ps
     9  docker ps
    10  docker logs db
      12  docker exec -it db /bin/bash
-
+mysql -u root -p
+show databases;
+exit
+exit
