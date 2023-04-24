@@ -1,0 +1,11 @@
+###firrst we need to be a root user or adminuser in windows to install docker
+ apt-get update
+    9  apt-get install     ca-certificates     curl     gnupg
+   10  install -m 0755 -d /etc/apt/keyrings
+   11  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   12  chmod a+r /etc/apt/keyrings/docker.gpg
+   13  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   14  apt-get update
+   15  apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   16  docker --version
