@@ -24,3 +24,15 @@ mysql -u root -p
 show databases;
 exit
 exit
+###docker networking
+ip a
+ 13  docker network ls
+   14  docker network inspect 6cd595136a78
+   15  clear
+  
+   18  docker container run -d --name proxy -p 81:80 nginx
+   19  docker ps
+   20  docker container run -d --name proxy nginx
+   21  docker container run -d nginx
+   22  docker ps
+
