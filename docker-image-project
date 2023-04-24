@@ -20,3 +20,5 @@ ENTRYPOINT ["java","-jar","/websocketdemo.jar"]
 #####to save it ctrl x Press y and enter
 ###then build the image using 
 docker build -t chatapp .
+###to check image
+docker images
