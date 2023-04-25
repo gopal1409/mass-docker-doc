@@ -9,3 +9,9 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 hostname
 ##3change the hostname
 kubectl taint nodes ip-172-31-87-148 node-role.kubernetes.io/control-plane-
+
+
+####if you want to run kubectl as normal user
+usermod -aG kubectl gopal
+
+
