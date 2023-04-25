@@ -1,6 +1,6 @@
 
     9  apt-get update
-   10  shutdown -h now
+ 
    11  cat <<EOF | sudo tee /etc/modules-load.d/crio.conf
    12  overlay
    13  br_netfilter
