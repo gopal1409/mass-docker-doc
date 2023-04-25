@@ -1,0 +1,6 @@
+79  git clone https://github.com/gopal1409/mass-k8s-manifest-apr-23.git
+   80  cd mass-k8s-manifest-apr-23/
+   81  ls
+   84  kubectl apply -f pod.yml
+   85  kubectl get pod
+   86  kubectl describe pod nginx
