@@ -6,3 +6,6 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ##taint the system
+hostname
+##3change the hostname
+kubectl taint nodes ip-172-31-87-148 node-role.kubernetes.io/control-plane-
