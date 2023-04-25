@@ -4,3 +4,17 @@
    84  kubectl apply -f pod.yml
    85  kubectl get pod
    86  kubectl describe pod nginx
+   ####get more information about pod
+   91  kubectl get pod
+   ##3this will give you running pod configuration###it will be opened in vi editor Press Esc :q 
+   92  kubectl edit pod nginx
+#########dry run
+ 93  kubectl run new-nginx --image=nginx --dry-run=client -o yaml
+cd ..
+###save the dry run and apply it
+ 101  kubectl run new-nginx --image=nginx --dry-run=client -o yaml > pod1.yml
+  102  ls
+  103  cat pod1.yml
+  104  kubectl apply -f pod1.yml
+  105  kubectl get pod
+
