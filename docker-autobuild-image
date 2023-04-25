@@ -1,0 +1,7 @@
+###first do docker login
+docker login
+################
+apt install default-jdk
+apt install maven
+######build the image and push it
+  136  mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.1:build -Djib.from.image=eclipse-temurin -Djib.to.image=docker.io/gopal1409/chatapp:v1
