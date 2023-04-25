@@ -17,4 +17,7 @@ cd ..
   103  cat pod1.yml
   104  kubectl apply -f pod1.yml
   105  kubectl get pod
+  ####to trouble shoot pod 
+  kubectl describe pod nameofthepod
+  kubectl logs nameofthepod
 
