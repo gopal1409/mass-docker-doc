@@ -20,4 +20,7 @@ cd ..
   ####to trouble shoot pod 
   kubectl describe pod nameofthepod
   kubectl logs nameofthepod
+##3how to delete a pod
+ 108  kubectl delete pod new-nginx
+  109  kubectl get pod
 
