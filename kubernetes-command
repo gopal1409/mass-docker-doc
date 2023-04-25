@@ -1,0 +1,2 @@
+  69  kubectl get nodes
+   70  kubectl get pod -A
