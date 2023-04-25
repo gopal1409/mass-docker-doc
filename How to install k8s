@@ -1,32 +1,32 @@
 
     9  apt-get update
  
-   11  cat <<EOF | sudo tee /etc/modules-load.d/crio.conf
-   12  overlay
-   13  br_netfilter
-   14  EOF
+   cat <<EOF | sudo tee /etc/modules-load.d/crio.conf
+   overlay
+   br_netfilter
+   EOF
    15  # Set up required sysctl params, these persist across reboots.
-   16  cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
-   17  net.bridge.bridge-nf-call-iptables  = 1
-   18  net.ipv4.ip_forward                 = 1
-   19  net.bridge.bridge-nf-call-ip6tables = 1
-   20  EOF
+   cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+   net.bridge.bridge-nf-call-iptables  = 1
+   net.ipv4.ip_forward                 = 1
+   net.bridge.bridge-nf-call-ip6tables = 1
+   EOF
    21  sudo modprobe overlay
    22  sudo modprobe br_netfilter
-   23  cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
-   24  net.bridge.bridge-nf-call-iptables  = 1
-   25  net.ipv4.ip_forward                 = 1
-   26  net.bridge.bridge-nf-call-ip6tables = 1
-   27  EOF
+   cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+   net.bridge.bridge-nf-call-iptables  = 1
+   net.ipv4.ip_forward                 = 1
+   net.bridge.bridge-nf-call-ip6tables = 1
+   EOF
    28  sudo sysctl --system
    29  OS="xUbuntu_20.04"
    30  VERSION="1.23"
-   31  cat <<EOF | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
-   32  deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /
-   33  EOF
-   34  cat <<EOF | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.list
-   35  deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$VERSION/$OS/ /
-   36  EOF
+   cat <<EOF | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+   deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /
+   EOF
+   cat <<EOF | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.list
+   deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$VERSION/$OS/ /
+   EOF
    37  curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/$OS/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
    38  curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/Release.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/libcontainers.gpg add -
    39  sudo apt-get update
@@ -45,9 +45,7 @@
 
  53  crictl ps
    54  sudo kubeadm init --pod-network-cidr=192.168.0.0/16
-   55  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
-   56  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
-   57  kubectl get nodes
+  
    58  kubectl taint nodes ip-172-31-87-148 node-role.kubernetes.io/control-plane-
    59  kubectl get nodes
    60  kubectl run web --image-nginx
