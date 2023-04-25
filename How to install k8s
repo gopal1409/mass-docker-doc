@@ -1,13 +1,4 @@
- ##3how to install kubernetes with crictl
- root@ip-172-31-87-148:~# history
-    1  apt-get update
-    2  adduser amadmin
-    3  visudo
-    4  systemctl restart sshd
-    5  exit
-    6  vi /etc/cloud/cloud.cfg
-    7  vi /etc/ssh/sshd_config
-    8  shutdown -h now
+
     9  apt-get update
    10  shutdown -h now
    11  cat <<EOF | sudo tee /etc/modules-load.d/crio.conf
