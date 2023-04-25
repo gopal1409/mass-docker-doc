@@ -1,2 +1,6 @@
   69  kubectl get nodes
    70  kubectl get pod -A
+##3how to verify that pod is running as container using crictl
+crictl
+crictl ps
+crictl images
