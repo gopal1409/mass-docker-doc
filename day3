@@ -1,0 +1,6 @@
+###create a deployment
+117  cd mass-k8s-manifest-apr-23/
+  118  git pull
+  122  kubectl apply -f deployment.yml
+123  kubectl get deploy
+kubectl describe deploy
