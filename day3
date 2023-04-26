@@ -16,6 +16,14 @@ kubectl describe deploy
   141  kubectl get rs
   142  kubectl get pod
   143  kubectl describe rs nginx-deployment-f7bf894d8
+  ###new deployment web
+  149  cd ..
+  150  kubectl create deploy web --image=httpd --port=80 --dry-run=client -o yaml > web.yml
+  151  kubectl apply -f web.yml
+  152  kubectl get deploy
+  153  kubectl get rs
+  154  kubectl get pod
+
 
 
 
