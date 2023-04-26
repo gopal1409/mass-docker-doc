@@ -7,4 +7,9 @@ kubectl describe deploy
  131  kubectl describe deploy nginx-deploy
   132  kubectl get pod
   133  kubectl describe pod nginx-deployment-f7bf894d8-92jmf
+  ####updated the image with new version
+  git pull
+    136  kubectl apply -f deployment.yml
+  137  kubectl get pod
+
 
