@@ -4,3 +4,7 @@
   122  kubectl apply -f deployment.yml
 123  kubectl get deploy
 kubectl describe deploy
+ 131  kubectl describe deploy nginx-deploy
+  132  kubectl get pod
+  133  kubectl describe pod nginx-deployment-f7bf894d8-92jmf
+
