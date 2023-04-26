@@ -23,6 +23,18 @@ kubectl describe deploy
   152  kubectl get deploy
   153  kubectl get rs
   154  kubectl get pod
+###rolling update and rollback
+  114  kubectl set image deploy nginx=nginx:1.161
+  115  kubectl set image deploy nginx-deployment nginx=nginx:1.161
+  116  kubectl rollout status deploy nginx-deployment
+  117  kubectl get rs
+  118  kubectl get pod
+  119  kubectl describe deploy nginx-deployment
+  120  kubectl rollout history deploy nginx-deployment
+  121  kubectl rollout history deploy nginx-deployment --revision=2
+  
+  123  kubectl rollout undo deploy nginx-deployment
+  125  kubectl rollout undo deploy nginx-deployment --to-revision=2
 
 
 
