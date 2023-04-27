@@ -17,4 +17,20 @@
   209  cd /root
   210  ls
   211  cd mass-k8s-manifest-apr-23/
-
+####lets create persistent volume
+vi pv.yml
+#####inside pv.yml copy and paste it
+###before that Press Esc i
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: task-pv
+spec:
+  capacity:
+    storage: 2Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce #readwritemany #read
+  hostPath:
+    path: "/mnt/data"
+    ###save it using Press Esc :wq
