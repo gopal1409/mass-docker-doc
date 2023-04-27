@@ -57,3 +57,11 @@ spec:
   230  kubectl apply -f secret.yml
   231  kubectl get secret
   232  kubectl describe secret mysql-db-password
+  
+  
+  ####add configmap 
+   234  git pull
+  235  kubectl apply -f configmap.yml
+  236  kubectl get configmap
+  237  kubectl describe configmap userdb-creation-script
+
