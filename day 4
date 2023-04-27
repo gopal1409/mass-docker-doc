@@ -7,3 +7,6 @@
 ###to create a service against your pod
  194  kubectl expose deploy web --type=NodePort --name=web-service
   195  kubectl get svc
+#####verify the proxcy
+ 199  kubectl get pod -o wide
+203  kubectl describe svc web-service
