@@ -40,3 +40,16 @@ spec:
     #####check pv is created or not
     kubectl get pv
     kubectl describe pv
+    ###create pv and pvc
+    206  mkdir /mnt/data
+     211  cd mass-k8s-manifest-apr-23/
+  212  history
+  213  git pull
+  214  kubectl apply -f pv.yml
+  215  kubectl get pv
+  216  kubectl describe pv
+  217  git pull
+  218  kubectl apply -f pvc.yml
+  219  kubectl get pv
+  220  kubectl get pvc
+
