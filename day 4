@@ -34,3 +34,6 @@ spec:
   hostPath:
     path: "/mnt/data"
     ###save it using Press Esc :wq
+    
+    ###after saving it
+    kubectl apply -f pv.yml
