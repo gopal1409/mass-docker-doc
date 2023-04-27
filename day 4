@@ -65,3 +65,16 @@ spec:
   236  kubectl get configmap
   237  kubectl describe configmap userdb-creation-script
 
+######mysql deployment
+ 254  git pull
+  255  kubectl apply -f mysqldeployment.yml
+  256  kubectl get pod
+  257  kubectl describe pod myapp-mysql-657887465d-6tf6g
+  258  kubectl exec -it  myapp-mysql-657887465d-6tf6g -- /bin/bash
+##3once login inside the pod
+mysql -u root -p
+###put the password as dbpassword11
+show databases;
+###do exit two times
+exit
+exit
