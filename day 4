@@ -81,3 +81,14 @@ show databases;
 ###do exit two times
 exit
 exit
+###quota management in k8s
+ 211  kubectl get ns
+  212  kubectl create ns dev
+  213  kubectl describe ns dev
+  214  ls
+  215  cd mass-k8s-manifest-apr-23/
+  216  git pull
+  217  kubectl apply -f ns-quota.yml --namespace=dev
+  218  git pull
+  219  kubectl apply -f ns-quota.yml --namespace=dev
+  220  kubectl describe ns dev
