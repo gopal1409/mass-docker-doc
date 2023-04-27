@@ -1,0 +1,6 @@
+###scaling. 
+192  kubectl scale deployment web --replicas=5
+  193  kubectl get deploy
+  194  kubectl get pod
+    197  kubectl autoscale deployment web --min=5 --max=10 --cpu-percent=80
+  198  kubectl get hpa
