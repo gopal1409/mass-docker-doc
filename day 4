@@ -10,3 +10,11 @@
 #####verify the proxcy
  199  kubectl get pod -o wide
 203  kubectl describe svc web-service
+###3we will create an storage folder in my local machine
+ 206  mkdir /mnt/data
+  207  cd /mnt/data
+  208  ls
+  209  cd /root
+  210  ls
+  211  cd mass-k8s-manifest-apr-23/
+
