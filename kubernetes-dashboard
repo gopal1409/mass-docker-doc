@@ -1,0 +1,15 @@
+ 266  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+  267  kubectl get pod -A
+  268  kubectl get svc -A
+   276  git pull
+  277  kubectl apply -f user.yml
+  278  kubectl apply -f role.yml
+
+  270  kubectl edit svc kubernetes-dashboard --namespace=kubernetes-dashboard
+  ###press Esc i
+  ###go to the third last line change the CLusterip to NodePort
+  ##the press Esc :wq!
+  268  kubectl get svc -A
+  ###open the browser put the publis ip with https
+  279  kubectl -n kubernetes-dashboard create token admin-user
+ 
