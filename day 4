@@ -52,4 +52,8 @@ spec:
   218  kubectl apply -f pvc.yml
   219  kubectl get pv
   220  kubectl get pvc
-
+###lets create the secret in kubernete
+ 229  git pull
+  230  kubectl apply -f secret.yml
+  231  kubectl get secret
+  232  kubectl describe secret mysql-db-password
