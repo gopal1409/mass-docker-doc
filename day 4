@@ -37,3 +37,6 @@ spec:
     
     ###after saving it
     kubectl apply -f pv.yml
+    #####check pv is created or not
+    kubectl get pv
+    kubectl describe pv
