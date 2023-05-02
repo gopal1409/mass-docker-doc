@@ -12,4 +12,8 @@
  372  kubectl delete job node-app-job
   373  kubectl apply -f jobs.yml
   374  kubectl get pod
+###backofflimit
+376  git pull
+  377  kubectl delete job node-app-job
+  378  kubectl get pod
 
