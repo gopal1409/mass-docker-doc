@@ -3,3 +3,9 @@
   345  kubectl apply -f jobs.yml
   346  kubectl get pod
   347  kubectl logs node-app-job-rfv9m
+  #jobs parrelisim and completion
+   361  kubectl delete job node-app-job
+  362  git pull
+  363  kubectl apply -f jobs.yml
+  364  kubectl get pod
+
