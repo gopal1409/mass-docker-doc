@@ -1,0 +1,8 @@
+How to install helm
+ 427  cd ..
+  428  wget https://get.helm.sh/helm-v3.11.3-linux-amd64.tar.gz
+  429  tar zxvf helm-v3.11.3-linux-amd64.tar.gz
+  430  cd linux-amd64/
+  431  ls
+  432  mv helm /usr/bin/
+  433  helm
