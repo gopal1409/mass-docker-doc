@@ -1,0 +1,9 @@
+ 390  git pull
+  
+  393  kubectl apply -f state-secret.yml
+  394  kubectl apply -f state-pv.yml
+  395  kubectl apply -f state-pvc.yml
+  396  kubectl get pv
+  397  kubectl get pvc
+  398  kubectl get secret
+
