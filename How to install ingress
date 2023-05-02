@@ -1,0 +1,62 @@
+ ####How to install ingress
+ 344  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
+  345  kubectl get pods --namespace=ingress-nginx
+  346  kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+  347  kubectl get svc -A
+  
+  ###we will create two pod and two service
+   349  kubectl run pod1 --image=nginx
+  350  kubectl run pod2 --image=httpd
+  351  kubectl expose pod pod1 --port 80 --name service1
+  352  kubectl expose pod pod2 --port 80 --name service2
+  353  kubectl get svc
+###deploy ingress
+vi ingress.yml
+#################
+apiVersion: networking.k8s.io/v1
+
+kind: Ingress
+
+metadata:
+
+  name: minimal-ingress
+
+  annotations:
+
+    nginx.ingress.kubernetes.io/rewrite-target: /
+
+spec:
+
+  ingressClassName: nginx
+
+  rules:
+
+  - http:
+
+      paths:
+
+      - path: /service1
+
+        pathType: Prefix
+
+        backend:
+
+          service:
+
+            name: service1
+
+            port:
+
+              number: 80
+      - path: /service2
+
+        pathType: Prefix
+        backend:
+
+            service:
+
+              name: service2
+
+              port:
+
+                number: 80
