@@ -8,4 +8,8 @@
   362  git pull
   363  kubectl apply -f jobs.yml
   364  kubectl get pod
+###error in job
+ 372  kubectl delete job node-app-job
+  373  kubectl apply -f jobs.yml
+  374  kubectl get pod
 
