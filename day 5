@@ -1,0 +1,5 @@
+#jobs in k8s
+ 337  cd mass-k8s-manifest-apr-23/
+  345  kubectl apply -f jobs.yml
+  346  kubectl get pod
+  347  kubectl logs node-app-job-rfv9m
