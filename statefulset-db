@@ -6,4 +6,18 @@
   396  kubectl get pv
   397  kubectl get pvc
   398  kubectl get secret
+  ####statefulset in k8s
+   390  git pull
+   407  kubectl apply -f state-mysql.yml
+  408  kubectl get statefulset
+  409  kubectl get pod
+  410  kubectl apply -f state-mysql-service.yml
+  411  kubectl get svc
+  412  history
+  413  kubectl get svc
+  414  kubectl describe svc mysql
+  415  kubectl get deploy
+  416  kubectl get pod -o wide
+
+
 
