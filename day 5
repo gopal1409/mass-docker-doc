@@ -16,4 +16,11 @@
 376  git pull
   377  kubectl delete job node-app-job
   378  kubectl get pod
+  #active dead line
+   384  git pull
+ 
+  386  kubectl delete job node-app-job
+  387  kubectl apply -f jobs.yml
+  388  kubectl get pod
+
 
